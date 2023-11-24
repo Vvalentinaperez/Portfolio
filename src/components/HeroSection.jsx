@@ -1,27 +1,6 @@
+"use client";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-
-const ExampleComponent = () => {
-  return (
-    <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        "We produce food for Mice",
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        "We produce food for Hamsters",
-        1000,
-        "We produce food for Guinea Pigs",
-        1000,
-        "We produce food for Chinchillas",
-        1000,
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: "2em", display: "inline-block" }}
-      repeat={Infinity}
-    />
-  );
-};
 
 const HeroSection = () => {
   return (
@@ -32,7 +11,20 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r  from-slate-500  to-slate-700">
               Hola, soy{" "}
             </span>
-            Valen!
+            <br></br>
+            <TypeAnimation
+              sequence={[
+                "Valen",
+                1000,
+                "Full Stack Developer",
+                1000,
+                "Front end Developer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
