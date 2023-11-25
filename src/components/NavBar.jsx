@@ -9,7 +9,7 @@ const NavBar = () => {
     },
     {
       title: "Projects",
-      path: "#porjects",
+      path: "#projects",
     },
     {
       title: "Contact",
@@ -18,16 +18,19 @@ const NavBar = () => {
   ];
 
   return (
-    <nav>
-      <div className="flex flex-wrap items-center justify-between mx-auto p-8">
-        <Link href={"/"} className="text-[15px] text-white font-semibold">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
+      <div className="flex flex-wrap items-center justify-between mx-auto py-4">
+        <Link
+          href={"/"}
+          className=" text-lg md:text-[17px] text-white font-semibold"
+        >
           <h1>Home</h1>
         </Link>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul>
+        <div className="menu hidden md:block md:w-auto text-white" id="navbar">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} text={link.title} />
+                <NavLink href={link.path} title={link.title} />
               </li>
             ))}
           </ul>
