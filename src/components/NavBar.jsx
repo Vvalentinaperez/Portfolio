@@ -1,7 +1,13 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
+import menuHamb from "./iconos/menuHamb";
+import clouseIcon from "./iconos/clouseIcon";
 
 const NavBar = () => {
+  const [navBarOpen, setNavBarOpen] = useState(false);
+
   const navLinks = [
     {
       title: "About",
@@ -26,6 +32,17 @@ const NavBar = () => {
         >
           <h1>Home</h1>
         </Link>
+        <div className="mobile-menu md:hidden block">
+          {navBarOpen ? (
+            <button className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
+              <menuHamb className="h-5 w-5" />
+            </button>
+          ) : (
+            <button>
+              <clouseIcon className="h-5 w-5" />
+            </button>
+          )}
+        </div>
         <div className="menu hidden md:block md:w-auto text-white" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
