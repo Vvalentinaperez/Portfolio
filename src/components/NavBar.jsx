@@ -2,26 +2,26 @@
 import { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import menuHamb from "./iconos/menuHamb";
-import clouseIcon from "./iconos/clouseIcon";
+import MenuOverlay from "@/components/MenuOverlay";
+import { BeakerIcon, XIcon as XmarkIcon } from "@heroicons/react/solid";
+
+const navLinks = [
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+];
 
 const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
-
-  const navLinks = [
-    {
-      title: "About",
-      path: "#about",
-    },
-    {
-      title: "Projects",
-      path: "#projects",
-    },
-    {
-      title: "Contact",
-      path: "#contact",
-    },
-  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
@@ -34,12 +34,18 @@ const NavBar = () => {
         </Link>
         <div className="mobile-menu md:hidden block">
           {navBarOpen ? (
-            <button className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
-              <menuHamb className="h-5 w-5" />
+            <button
+              onClick={() => setNavBarOpen(true)}
+              className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <BeakerIcon className="h-6 w-6  text-white" />
             </button>
           ) : (
-            <button>
-              <clouseIcon className="h-5 w-5" />
+            <button
+              onClick={() => setNavBarOpen(false)}
+              className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <XmarkIcon className="h-5 w-5  text-white" />
             </button>
           )}
         </div>
@@ -53,6 +59,7 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
+      {navBarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 };
