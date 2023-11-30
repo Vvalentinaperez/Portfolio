@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import MenuOverlay from "@/components/MenuOverlay";
-import { BeakerIcon, XIcon as XmarkIcon } from "@heroicons/react/solid";
+import { XIcon as XmarkIcon } from "@heroicons/react/solid";
 
 const navLinks = [
   {
@@ -62,7 +62,7 @@ const NavBar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto text-white" id="navbar">
+        <div className="menu hidden md:block md:w-auto text-white p-1">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
