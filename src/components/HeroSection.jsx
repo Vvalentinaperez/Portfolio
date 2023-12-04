@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
         <div>
           <div className=" col-span-5  place-self-center mt-4 lg:mt-0 ">
-            <div className="rounded-full bg-[#202020] w-[250px] h-[250px] lg:h-[400px] lg:w-[400px] relative overflow-hidden">
+            <div className="rounded-full bg-[#202020] w-[250px] h-[250px] lg:h-[400px] lg:w-[400px] mx-auto relative overflow-hidden ">
               <Image
                 src="/mifoto.png"
                 width={300}
