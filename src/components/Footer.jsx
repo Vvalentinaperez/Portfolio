@@ -6,7 +6,10 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="footer border border-t-[#33353F] border-l-transparent border-r-transparent text-white">
+    <footer
+      className="footer border border-t-[#33353F] border-l-transparent border-r-transparent text-white"
+      id="contact"
+    >
       <div className="container p-12 flex flex-col md:flex-row justify-between">
         <div className="socials flex flex-row gap-2 mb-4 md:mb-0">
           <Link href="https://github.com/Vvalentinaperez/">
