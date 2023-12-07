@@ -31,9 +31,16 @@ const HeroSection = () => {
           </p>
           <button
             className="px-6 py-3 w-full sm:w-fit rounded-full  bg-gradient-to-br from-slate-600 via-slate-300 
-          to-slate-900 hover:bg-slate-200 text-black mr-4 "
+          to-slate-900 hover:bg-slate-200  active:bg-slate-900 text-black mr-4 focus:outline-none focus:ring focus:border-blue-300"
           >
-            Hire me
+            <a
+              href="/carta.pdf" // Reemplaza con la ruta correcta a tu archivo CV
+              download="carta.pdf" // Especifica el nombre de descarga del archivo
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hire Me
+            </a>
           </button>
           <button
             className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-slate-600 via-slate-300 
@@ -43,6 +50,8 @@ const HeroSection = () => {
               href="/cv.pdf" // Reemplaza con la ruta correcta a tu archivo CV
               download="cv.pdf" // Especifica el nombre de descarga del archivo
               className="block bg bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 "
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download CV
             </a>
