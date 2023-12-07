@@ -7,7 +7,8 @@ const projectsData = [
     description: "Detail of the characters of the series",
     image: "/projects/pr1.jpeg",
     gitUrl: "https://github.com/Vvalentinaperez/RickAndMorty.git",
-    previewUrl: "/",
+    previewUrl:
+      "https://drive.google.com/file/d/13Tgl-6Uq253Aap01V7lWCYm0iafdVGL7/view?usp=drive_link",
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const projectsData = [
       "Application with information about Pokemon and the possibility of creating new ones",
     image: "/projects/pr2.jpeg",
     gitUrl: "https://github.com/Vvalentinaperez/PI-Pokemon.git",
-    previewUrl: "/",
+    previewUrl:
+      "https://drive.google.com/file/d/1H0AodNlEbtJAu8l8iQzlmjuhxPSXX0Vd/view?usp=drive_link",
   },
   {
     id: 3,
@@ -24,15 +26,16 @@ const projectsData = [
     description: "page for purchasing furniture and hiring decoration services",
     image: "/projects/pr3.jpeg",
     gitUrl: "https://github.com/bgdesign23",
-    previewUrl: "/",
+    previewUrl:
+      "https://drive.google.com/file/d/1w9X4ZjYUwVsD_1wQI9Ex9W-LnqFYDlBw/view?usp=drive_link",
   },
 ];
 
 const ProjectsSection = () => {
   return (
     <>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4">
-        My Projects
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8">
+        Projects
       </h2>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project) => (

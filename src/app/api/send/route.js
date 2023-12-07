@@ -1,3 +1,15 @@
+// export default async function handler(req, res) {
+//   if (req.method === "POST") {
+//     try {
+//     } catch (error) {
+//       console.log("Error al enviar el correo:", error);
+//       res.status(500).json({ error: "Error interno del servidor" });
+//     }
+//   } else {
+//     res.status(405).json({ error: "Metodo no permitido" });
+//   }
+// }
+
 // // import { EmailTemplate } from "../../../components/EmailTemplate";
 // import { Resend } from "resend";
 // import { Response } from "next/server";
