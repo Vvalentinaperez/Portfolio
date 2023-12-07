@@ -57,17 +57,16 @@ const HeroSection = () => {
             </a>
           </button>
         </div>
-        <div>
-          <div className=" col-span-5  place-self-center mt-4 lg:mt-0 ">
-            <div className="rounded-full bg-[#202020] w-[250px] h-[250px] lg:h-[400px] lg:w-[400px] mx-auto relative overflow-hidden ">
-              <Image
-                src="/mifoto.png"
-                width={300}
-                height={300}
-                alt="mifoto"
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
-              />
-            </div>
+
+        <div className="col-span-12 sm:col-span-5 place-self-center sm:mt-0 mt-4 relative">
+          <div className="rounded-full overflow-hidden mx-auto w-[300px] h-[300px] sm:w-[300px] sm:h-[300px]">
+            <Image
+              src="/mifoto.jpeg"
+              width={300}
+              height={300}
+              alt="mifoto"
+              className="object-cover w-full h-full rounded-full"
+            />
           </div>
         </div>
       </div>
