@@ -22,7 +22,7 @@ const projectsDesing = [
 ];
 const DesingSection = () => {
   return (
-    <section>
+    <section id="models">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8">
         Models
       </h2>
