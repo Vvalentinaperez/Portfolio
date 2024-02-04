@@ -18,6 +18,7 @@ const TAB_DATA = [
         <li>PostgreSQL</li>
         <li>HTML</li>
         <li>CSS</li>
+        <li>Tailwind</li>
       </ul>
     ),
   },
@@ -28,6 +29,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Curso GIT, Codigo Facilito</li>
         <li>Full Stack Developer, Soy Henry</li>
+        <li>Ingenieria en Sistemas Informaticos -En Curso</li>
       </ul>
     ),
   },
@@ -38,6 +40,25 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Full Stack Developer, Soy Henry</li>
         <li>Curso GIT, Codigo Facilito</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Diseño UX/UI",
+    id: "diseño",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Figma</li>
+        <li>Metodologías de diseño UX</li>
+        <li>Research</li>
+        <li>Proto-Persona y User-Persona</li>
+        <li>Benchmarking</li>
+        <li>Entrevistas, POV & MVP</li>
+        <li>Arquitectura de Informacion</li>
+        <li>User Flow</li>
+        <li>Wireframe</li>
+        <li>Patrones de Diseño</li>
+        <li>Sistema de Grillas, estandares y guidelines</li>
       </ul>
     ),
   },
@@ -70,6 +91,12 @@ const AboutSection = () => {
               active={tab === "skills"}
             >
               Skills
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("diseño")}
+              active={tab === "diseño"}
+            >
+              Diseño UX/UI
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
