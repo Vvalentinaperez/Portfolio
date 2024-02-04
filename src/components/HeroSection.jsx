@@ -20,6 +20,8 @@ const HeroSection = () => {
                 1000,
                 "Front end Developer",
                 1000,
+                "Diseño UX/UI",
+                1000,
               ]}
               wrapper="span"
               speed={50}
@@ -27,7 +29,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Front end Developer | Full Stack Developer
+            Front end Developer | Full Stack Developer | Diseño UX/UI
           </p>
           <button
             className="px-6 py-3 w-full sm:w-fit rounded-full  bg-gradient-to-br from-slate-600 via-slate-300 
